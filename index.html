@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__wrapper">
+            <div>
+                <img class="header__logo" src="./assets/img/logo.svg" alt="Logotype">
+            </div>
+            <nav class="header__navigation">
+                <ul class="menu">
+                    <li class="menu__item"><a href="#">Main Page</a></li>
+                    <li class="menu__item"><a href="#">About Us</a></li>
+                    <li class="menu__item"><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="description">
+            <div class="container">
+                <div class="description__wrapper">
+                    <p class="description__paragraph">
+                        БЭМ (Блок, Элемент, Модификатор) — компонентный подход к веб-разработке. В его основе лежит принцип разделения интерфейса на независимые блоки. Он позволяет легко и быстро разрабатывать интерфейсы любой сложности и повторно использовать существующий код, избегая «Copy-Paste».
+                    </p>
+                    <img src="./assets/img/sergi-kabrera-705414-unsplash.jpg" alt="Awesome Keyboard!" class="description__banner">
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <div id="app">
+                    <h2>Learning Vue.js</h2>
+                    <p>{{message}}</p>
+                    <div class="advatages__inputs">
+                        <input type="text" v-model="firstName" placeholder="First Name">
+                        <input type="text" v-model="lastName" placeholder="Last Name">
+                    </div>
+                    <p>Full Name : {{fullName}}</p>
+                    <hr>
+                    <div id="response">
+                        <p>Data loaded from api via axios from api.coindesk.com</p>
+                        <ul>
+                            <li v-for="item in info">
+                                {{item.code}} - {{item.description}}
+                            </li>
+                        </ul>
+                    </div>
+                    <button v-on:click="sampleMethod">Button</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <ul class="footer__list">
+                    <li class="footer-link">Link #1</li>
+                    <li class="footer-link">Link #2</li>
+                    <li class="footer-link">Some another link</li>
+                    <li class="footer-link">Anything else</li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer-link">Gallery</li>
+                    <li class="footer-link">Prices</li>
+                    <li class="footer-link">Hire me pls:3</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/mascript.js"></script>
+</body>
+</html>
